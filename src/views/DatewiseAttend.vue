@@ -58,7 +58,15 @@
 <v-container>
     <v-row >
       <v-col>
-         <div class="dropdown">
+        
+        <v-select @change="onChange"
+          :items="dropdowns"
+          label="Solo field"
+          solo
+        ></v-select>
+
+        
+         <!-- <div class="dropdown">
     <select @change="onChange" class="form-select form-control" v-model="selected">
         <option value="">---- Select Batch ----</option>
         <option v-for="(item, index) in list" :value="item.batch" :key="index">
@@ -66,7 +74,7 @@
 
         </option>
     </select>
- </div> 
+ </div>  -->
         <v-date-picker 
           v-model="date"
           @dblclick:date="dblClick"
@@ -142,7 +150,8 @@ var api= "https://my--1.herokuapp.com/";
         dates:[],
         date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
         done: [false, false, false],
-        list:[]
+        list:[],
+        dropdowns: ['One', 'Two', 'Three', 'Four'],
      }),
    
     mounted(){
@@ -182,9 +191,9 @@ var api= "https://my--1.herokuapp.com/";
       }) 
       },
 
-      onChange(e){
-        console.log(e.target.value);
-        this.batch= e.target.value
+      onChange(dropdown){
+        console.log(dropdown);
+        this.batch= dropdown
       },
 
     generatePDF() {
