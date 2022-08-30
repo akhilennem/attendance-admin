@@ -134,7 +134,7 @@ import axios from 'axios'
 
   methods: {
     loginValidation() {
-      axios.post('https://qr-scan2.herokuapp.com/api/auth/signin', {
+      axios.post('https://my--1.herokuapp.com/api/auth/signin', {
             "username" : this.email,
             "password": this.password,
               }).then((response)=>{
