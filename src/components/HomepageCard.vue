@@ -66,15 +66,15 @@
             max-width="344"
           >
             <v-card-text >
-            <v-img src="about.jpg"></v-img>
+            <v-img src="late1.jpg"></v-img>
 
             </v-card-text>
             <v-card-actions>
               <v-btn
                 text
                 color="deep-purple accent-4"
-              ><router-link to='/adminabout'>
-                About</router-link>
+              ><router-link to='/lateapprove'>
+                Late Approval</router-link>
               </v-btn>
              </v-card-actions>
            </v-card>
