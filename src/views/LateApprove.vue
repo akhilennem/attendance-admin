@@ -65,7 +65,7 @@
     </v-app-bar>
 
 <v-img 
-      src="https://cdn2.vectorstock.com/i/1000x1000/28/36/being-late-for-work-cartoon-vector-25642836.jpg"
+      src="late.jpg"
       gradient="to top right, rgba(144,146,150,.06), rgba(25,32,72,.7)"
     >
     
@@ -87,7 +87,7 @@
             @click:row="rowClicked"
           >   
          <template v-slot:item="{ item }">
-            <tr :class="selectedRows.indexOf(item.email)>-1?'cyan lighten-4':''" @click="rowClicked(item)">
+            <tr :class="selectedRows.indexOf(item.email)>-1?'':''" @click="rowClicked(item)">
               <td>{{item.name }}</td>
               <td>{{item.email}}</td>
               <td>{{item.batch}}</td>
