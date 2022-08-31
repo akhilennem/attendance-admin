@@ -128,7 +128,7 @@ import axios from 'axios'
      items: [
           { title: 'Home', icon: 'mdi-home-outline' , to: '/adminhome'},
          // { title: 'Profile', icon: 'mdi-account-outline' ,to: '/adminprofile' },
-          { title: 'Daily Attendance', icon: 'mdi-calendar-account-outline',to:'/adminattend' },
+          { title: 'Daily Attendance', icon: 'mdi-calendar-account-outline',to:'/dailyattend' },
           { title: 'Student Details', icon: 'mdi-account-multiple' , to: '/studentdetails' },
           { title: 'Individual Attendance', icon: 'mdi-card-account-details-outline' , to: '/individualattend' },
           { title: 'Late Approval', icon: 'mdi-account-clock-outline' , to: '/lateapprove' },
