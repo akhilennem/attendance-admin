@@ -61,7 +61,7 @@
         
         <v-select @change="onChange"
           :items="dropdowns"
-          label="Solo field"
+          label="Select Batch"
           solo
         ></v-select>
 
