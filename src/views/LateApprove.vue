@@ -150,7 +150,7 @@ var api= "https://my--1.herokuapp.com/";
        teacher: [
           { text: 'Name', value: 'name' },
           { text: 'Email', value: 'email' },
-          { text: 'Batch', value: 'ebatch' }
+          { text: 'Batch', value: 'batch' }
         ],  
         list:[],
  
