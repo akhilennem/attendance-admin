@@ -207,8 +207,8 @@ var api ="https://my--1.herokuapp.com/";
         ],  
          header: [
           { text: 'Date', value: 'date' },
-          { text: 'First In', value: 'first_In' },
-          { text: 'First Out', value: 'first_out' },
+          { text: 'In', value: 'first_In' },
+          { text: 'Out', value: 'first_out' },
       
         ],
          teacher: [
@@ -297,7 +297,7 @@ var api ="https://my--1.herokuapp.com/";
 
     generatePDF() {
        var doc = new jsPDF();
-       var col1 = ["Date", "First In","First Out", "Signature"];
+       var col1 = ["Date", "In","Out", "Signature"];
        var rows1 = [];
   /* The following array of object as response from the API req  */
 
