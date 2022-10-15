@@ -76,25 +76,25 @@
            <v-data-table 
             :headers="teacher"
             :items="list"
-            selectionMode="single"
-            selectedClass="table-info"
-            @selectionChanged="selectedRows = $event"
             :items-per-page="10"
             :search="search"
-            
-            item-key="id"
-            v-model="selectedRows"
+            single-select
+            item-key="email"
             @click:row="rowClicked"
+            class="elevation-1"
           >   
          <template v-slot:item="{ item }">
-            <tr :class="selectedRows.indexOf(item.email)>-1?'cyan lighten-4':''" @click="rowClicked(item)">
-              <td>{{item.name }}</td>
+            <tr :class="selected.indexOf(item.email)>-1?'cyan lighten-4':''" @click="rowClicked(item)">
+            <td>{{item.name }}</td>
               <td>{{item.email}}</td>
               <td>{{item.batch}}</td>
-              <td @click="rowClicked(row)"></td>
             </tr>
           </template>
           </v-data-table>
+          
+        <strong>Selected Name:</strong>
+        <div v-if="selected.length === 0" class="text-muted">No Rows Selected</div>
+        <p> {{ selectedName }}</p> 
 
 
          <v-row>
@@ -134,8 +134,8 @@ var api= "https://my--1.herokuapp.com/";
     isLoggingIn2: false,
      snackbar1: false,
      snackbar2: false,
-     selectedRows: [],
-     selected:'',
+     selected: '',
+     selectedName:'',
      search: '',
      drawer: null,
      items: [
@@ -171,21 +171,27 @@ var api= "https://my--1.herokuapp.com/";
       })          
      },
 
-     rowClicked(row) {
-      this.swapSelectionStatus(row.email);
-      console.log(row.email);
-      this.selected = row.email;
+    //  rowClicked(row) {
+    //   this.swapSelectionStatus(row.email);
+    //   console.log(row.email);
+    //   this.selected = row.email;
+    //   },
+    rowClicked(item) {
+      console.log(item.email);
+      this.selected = item.email;
+      this.selectedName = item.name;
       },
-      swapSelectionStatus(keyID) {
-        if (this.selectedRows.includes(keyID)) {
-          this.selectedRows = this.selectedRows.filter(
-            selectedKeyID => selectedKeyID !== keyID
-          );
-        } 
-        else {
-          this.selectedRows.push(keyID);
-        }
-      },
+
+      // swapSelectionStatus(keyID) {
+      //   if (this.selectedRows.includes(keyID)) {
+      //     this.selectedRows = this.selectedRows.filter(
+      //       selectedKeyID => selectedKeyID !== keyID
+      //     );
+      //   } 
+      //   else {
+      //     this.selectedRows.push(keyID);
+      //   }
+      // },
 
       approveLate(){
         axios.post(api+'api/rest/leave',{
@@ -239,5 +245,7 @@ var api= "https://my--1.herokuapp.com/";
   }
 </script>
 <style>
-
+tr.v-data-table__selected {
+  background: #7d92f5 !important;
+}
 </style>
