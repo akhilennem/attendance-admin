@@ -139,10 +139,8 @@ import axios from 'axios'
             text: 'User Name',align: 'start',sortable: false,value: 'name'},
           { text: 'Email', value: 'email' },
           { text: 'Date', value: 'date' },
-          { text: 'First In', value: 'first_In' },
-          { text: 'First Out', value: 'first_out' },
-          { text: 'Second In', value: 'second_In' },
-          { text: 'Second Out', value: 'second_out' }
+          { text: 'In', value: 'first_In' },
+          { text: 'Out', value: 'first_out' },
           // {text: 'Delete', value:'actions'}
         ],
         list:[],
