@@ -87,7 +87,7 @@
             @click:row="rowClicked"
           >   
          <template v-slot:item="{ item }">
-            <tr :class="selectedRows.indexOf(item.email)>-1?'':''" @click="rowClicked(item)">
+            <tr :class="selectedRows.indexOf(item.email)>-1?'cyan lighten-4':''" @click="rowClicked(item)">
               <td>{{item.name }}</td>
               <td>{{item.email}}</td>
               <td>{{item.batch}}</td>
