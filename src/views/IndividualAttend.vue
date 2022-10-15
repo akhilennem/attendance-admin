@@ -209,8 +209,7 @@ var api ="https://my--1.herokuapp.com/";
           { text: 'Date', value: 'date' },
           { text: 'First In', value: 'first_In' },
           { text: 'First Out', value: 'first_out' },
-          { text: 'Second In', value: 'second_In' },
-          { text: 'Second Out', value: 'second_out' },
+      
         ],
          teacher: [
           { text: 'Name', value: 'name' },
@@ -298,7 +297,7 @@ var api ="https://my--1.herokuapp.com/";
 
     generatePDF() {
        var doc = new jsPDF();
-       var col1 = ["Date", "First In","First Out","Second In","Second Out", "Signature"];
+       var col1 = ["Date", "First In","First Out", "Signature"];
        var rows1 = [];
   /* The following array of object as response from the API req  */
 
@@ -306,7 +305,7 @@ var api ="https://my--1.herokuapp.com/";
        dates.forEach(dates => {   
         // console.log(temp1[0])  
         // console.log("dd") 
-            var temp1 = [dates.date, dates.first_In, dates.first_out, dates.second_In, dates.second_out, dates.sign, dates.name];
+            var temp1 = [dates.date, dates.first_In, dates.first_out, dates.sign, dates.name];
             rows1.push(temp1);
              doc.text("Name : " + dates.name, 14, 35);
             // doc.text("Phone : " + dates.name, 14, 35);
