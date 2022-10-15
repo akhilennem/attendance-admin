@@ -23,6 +23,7 @@
                            
                           <v-text-field
                             v-model="email"
+                            name="email"
                             :rules="emailRules" 
                             label="Email"
                             outlined
