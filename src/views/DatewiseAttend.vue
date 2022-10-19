@@ -124,7 +124,7 @@
 import axios from 'axios';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
-var api= "https://my--1.herokuapp.com/";
+var api= "https://qr-scan2.herokuapp.com/";
 
   export default {
    data: () => ({ 
