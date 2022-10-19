@@ -59,7 +59,7 @@ export default {
     },
     methods: {
         enterOtp() {
-            axios.get('https://my--1.herokuapp.com/api/mail/forget-password',{
+            axios.get('https://qr-scan2.herokuapp.com/api/mail/forget-password',{
                 params:{
                 "otp": this.otp,
                 "email": this.email}
