@@ -83,7 +83,7 @@ export default {
     },
     methods: {
          enterPassword() {
-             axios.get('https://my--1.herokuapp.com/api/mail/reset-password',{
+             axios.get('https://qr-scan2.herokuapp.com/api/mail/reset-password',{
                 params:{
                 "newpassword": this.password,
                 "email": this.email}
