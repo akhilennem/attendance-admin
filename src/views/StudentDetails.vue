@@ -152,7 +152,7 @@ import axios from 'axios'
      },
      methods:{
       getTodayAttendence(){
-      axios.get('https://my--1.herokuapp.com/api/rest/get-all')
+      axios.get('https://qr-scan2.herokuapp.com/api/rest/get-all')
       .then((response)=>{
         this.list=response.data;
         console.log(response.status);
