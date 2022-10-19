@@ -46,7 +46,7 @@ export default {
      }),
     methods: {
          forgot() {
-             axios.get('https://my--1.herokuapp.com/api/mail/web-otp',{
+             axios.get('https://qr-scan2.herokuapp.com/api/mail/web-otp',{
                 params:{
                 "email": this.email,
                 }
