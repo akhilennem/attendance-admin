@@ -122,7 +122,7 @@ import axios from 'axios'
 
   methods: {
       register() {       
-          axios.post('https://my--1.herokuapp.com/api/auth/admin-signup', {
+          axios.post('https://qr-scan2.herokuapp.com/api/auth/admin-signup', {
                     "username" : this.email,
                     "password": this.password,
                     "email": this.email
