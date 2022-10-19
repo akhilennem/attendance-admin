@@ -126,7 +126,7 @@
 
 <script>
 import axios from 'axios';
-var api= "https://my--1.herokuapp.com/";
+var api= "https://qr-scan2.herokuapp.com/";
 
   export default {
    data: () => ({ 
